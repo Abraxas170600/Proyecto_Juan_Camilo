@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class ProjectSettings : MonoBehaviour
 {
-    void Start()
+    private void Awake()
     {
+        Application.targetFrameRate = 60;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }
