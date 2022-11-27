@@ -20,6 +20,7 @@ public class AdvancedMovement
 {
     public float _jetpackRechargeRate;
     public float _fuelAmount;
+    public float _maxFuel;
     public float _boostStrength;
 }
 [System.Serializable]
