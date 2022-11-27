@@ -17,8 +17,6 @@ public class PlayerMovement : MonoBehaviour
     public void Jump(bool isGrounded, float jumpForce, Rigidbody rigidbody, bool isJump)
     {
         if (isJump && isGrounded)
-        {
             rigidbody.AddForce(new Vector3(0, jumpForce, 0), ForceMode.Impulse);
-        }
     }
 }

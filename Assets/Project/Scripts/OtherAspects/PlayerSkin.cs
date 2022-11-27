@@ -12,8 +12,5 @@ public class PlayerSkin : MonoBehaviour
         _renderer.material = material;
     }
 
-    private void OnDestroy()
-    {
-        Destroy(_renderer.material);
-    }
+    private void OnDestroy() => Destroy(_renderer.material);
 }
