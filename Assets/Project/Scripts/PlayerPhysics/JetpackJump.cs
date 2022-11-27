@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JetpackJump : MonoBehaviour
 {
-    private float fuel;
+    public float fuel { get; private set; }
     public void Initialize(float fuelAmount) => fuel = fuelAmount;
     public void Jetpack(bool isGrounded, Rigidbody rigidbody, float rechargeRate, float fuelAmount, float maxFuel, float boostStrength, bool jetpack)
     {
