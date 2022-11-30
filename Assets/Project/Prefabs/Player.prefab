@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 1187567442985988653}
   m_Layer: 6
   m_Name: FloorDetector
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b17f2855ddac35438764e71bcf2fb16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _player: {fileID: 11400000, guid: c4fa516e769bcca4fa7c6f1317fc8ec8, type: 2}
+  _playerDatabase: {fileID: 11400000, guid: c2755c667f0a71947b8d9ce0273d980f, type: 2}
+  _projectSettings: {fileID: 4905576259651283747, guid: 81438a3fc5064a84aa70bf10714068c5, type: 3}
+  _addScore: {fileID: 0}
 --- !u!114 &1187567444143434820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70bbacccca7c0704c88925d1e91ca553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _isGrounded: 0
+  _playerManager: {fileID: 9029049087657731001}
 --- !u!114 &1187567444143434845
 MonoBehaviour:
   m_ObjectHideFlags: 0
