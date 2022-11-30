@@ -10,6 +10,7 @@ public class ScoreSpawner : MonoBehaviour
     private void Start()
     {
         DelaySpawn();
+        //ScoreSpawn();
     }
     public void ScoreSpawn()
     {

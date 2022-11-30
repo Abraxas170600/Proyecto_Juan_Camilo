@@ -28,4 +28,10 @@ public class GameEvents : MonoBehaviour
         if (AddScoreText != null)
             AddScoreText();
     }
+    public event Action SoundAction;
+    public void DialogueSound()
+    {
+        if (SoundAction != null)
+            SoundAction();
+    }
 }

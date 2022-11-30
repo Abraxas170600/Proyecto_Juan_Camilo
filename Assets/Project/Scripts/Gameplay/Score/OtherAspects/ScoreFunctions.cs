@@ -23,6 +23,7 @@ public class ScoreFunctions : MonoBehaviour
         {
             if(_playerManager._currentScore >= _playerManager._playerDatabase._dialogue._dialogueData._sentences[i]._requierementScore && _checker == i)
             {
+                GameEvents._gameEvents.DialogueSound();
                 _dialogueUI.ShowText(i);
                 _checker++;
             }
