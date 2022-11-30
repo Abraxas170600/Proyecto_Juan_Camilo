@@ -5,6 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
+    public string _name;
+    public int _id;
     public BasicMovement _basicMovement;
     public AdvancedMovement _advancedMovement;
     public OtherAspects _otherAspects;
@@ -27,4 +29,6 @@ public class AdvancedMovement
 public class OtherAspects
 {
     public Material _material;
+    public PhysicMaterial _physicMaterial;
+    public float _playerMass;
 }

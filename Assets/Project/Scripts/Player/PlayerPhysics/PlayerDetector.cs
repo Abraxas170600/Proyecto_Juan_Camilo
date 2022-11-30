@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerDetector : MonoBehaviour
 {
-    public bool _isGrounded;
+    public bool _isGrounded { get; private set; }
     private void OnTriggerEnter(Collider other)
     {
         if (other.transform.CompareTag("Ground"))
@@ -19,5 +19,14 @@ public class PlayerDetector : MonoBehaviour
     {
         if (other.transform.CompareTag("Ground"))
             _isGrounded = false;
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Score"))
+        {
+            GameEvents._gameEvents.Add();
+            GameEvents._gameEvents.AddOnText();
+        }
+
     }
 }
