@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13f89db8f02eea24b8052d3fa75e2c65, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  _dialogueData:
+    _sentences:
+    - _requierementScore: 0
+      _sentence: 'Mysterious Voice: Test No.16, Experiment 134B active, your objective
+        this time will be to crash into the test sphere as many times as you can.'
+    - _requierementScore: 2
+      _sentence: 'Mysterious voice: To obtain the expected data in this session,
+        we will configure Experiment 134B using the ESCAPE button, and in the first
+        option of the command panel, we will select the desired configuration characteristics.'
+    - _requierementScore: 7
+      _sentence: 'Mysterious Voice: Experiment 134B continues to apply the daily
+        exercise, a constant rhythm is expected in the specimen''s electrical impulses
+        for the duration of the test.'
+    - _requierementScore: 13
+      _sentence: 'Mysterious voice: Apparently this test will last longer than expected,
+        I detail unusual impulses from Experiment 134B for colliding with the test
+        sphere, this one a bit.... Eager, no, that.... I''m not going to put that
+        in the report.'
+    - _requierementScore: 20
+      _sentence: 'Mysterious voice: Well, I''ll go get something to eat while Experiment
+        134B continues to chase that green ball, watch that it doesn''t try anything
+        weird in the meantime.'

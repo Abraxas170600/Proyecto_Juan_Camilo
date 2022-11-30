@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a85ea0b371012c8458ef97acbe4737df, type: 3}
+  m_Name: Light_Player
+  m_EditorClassIdentifier: 
+  _playerData:
+    _name: Light
+    _id: 2
+    _basicMovement:
+      _movementVelocity: 12
+      _jumpHeight: 11
+    _advancedMovement:
+      _jetpackRechargeRate: 2
+      _fuelAmount: 2
+      _maxFuel: 2
+      _boostStrength: 0.28
+    _otherAspects:
+      _material: {fileID: 2100000, guid: acc2d97c8c65850489a69b75b238feac, type: 2}
+      _physicMaterial: {fileID: 13400000, guid: 75a65b942c0727c4285d823bc9bcadbb, type: 2}
+      _playerMass: 0.6

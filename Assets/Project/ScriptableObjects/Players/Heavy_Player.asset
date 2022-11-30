@@ -10,16 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a85ea0b371012c8458ef97acbe4737df, type: 3}
-  m_Name: Player 1
+  m_Name: Heavy_Player
   m_EditorClassIdentifier: 
   _playerData:
+    _name: Heavy
+    _id: 1
     _basicMovement:
-      _movementVelocity: 9
-      _jumpHeight: 8
+      _movementVelocity: 7
+      _jumpHeight: 6
     _advancedMovement:
-      _jetpackRechargeRate: 1
-      _fuelAmount: 2.5
-      _maxFuel: 2.5
-      _boostStrength: 0.2
+      _jetpackRechargeRate: 1.5
+      _fuelAmount: 5
+      _maxFuel: 5
+      _boostStrength: 0.22
     _otherAspects:
-      _material: {fileID: 2100000, guid: 4717b199010ca4cb3a8a7a465ec457d2, type: 2}
+      _material: {fileID: 2100000, guid: c719e38f25a9480abd2480ab621a2949, type: 2}
+      _physicMaterial: {fileID: 13400000, guid: be6cf78ee68051243808c569a4e3d51d, type: 2}
+      _playerMass: 1.5
