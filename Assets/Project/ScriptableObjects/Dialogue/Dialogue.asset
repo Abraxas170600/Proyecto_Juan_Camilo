@@ -16,7 +16,8 @@ MonoBehaviour:
     _sentences:
     - _requierementScore: 0
       _sentence: 'Mysterious Voice: Test No.16, Experiment 134B active, your objective
-        this time will be to crash into the test sphere as many times as you can.'
+        this time will be to crash into the test sphere as many times as you can.
+        It would also be a good time to test levitation, with the E key please.'
     - _requierementScore: 2
       _sentence: 'Mysterious voice: To obtain the expected data in this session,
         we will configure Experiment 134B using the ESCAPE button, and in the first
