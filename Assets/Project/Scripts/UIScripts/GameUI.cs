@@ -11,6 +11,7 @@ public class GameUI : MonoBehaviour
 
     public GameObject _MenuPanel;
     public GameObject _characterPanel;
+    public GameObject _optionsPanel;
     public TMP_Text _scoreText;
     public Image _fuelBar;
 
@@ -41,14 +42,17 @@ public class GameUI : MonoBehaviour
             if (_menuPanelActive)
             {
                 ProjectSettings._projectSettings.StateGame(1);
+                Time.timeScale = 1;
                 _MenuPanel.SetActive(false);
                 _characterPanel.SetActive(false);
+                _optionsPanel.SetActive(false);
                 _menuPanelActive = false;
                 _characterPanelActive = false;
             }
             else
             {
                 ProjectSettings._projectSettings.StateGame(0);
+                Time.timeScale = 0;
                 _MenuPanel.SetActive(true);
                 _menuPanelActive = true;
             }
@@ -66,6 +70,23 @@ public class GameUI : MonoBehaviour
             _characterPanel.SetActive(true);
             _characterPanelActive = true;
         }
+    }
+    public void OptionsPanel(int panelActive)
+    {
+        if (panelActive == 0)
+        {
+            _optionsPanel.SetActive(true);
+            //Time.timeScale = 0;
+        }
+        else if (panelActive == 1)
+        {
+            _optionsPanel.SetActive(false);
+            //Time.timeScale = 1;
+        }
+    }
+    public void QuitButton()
+    {
+        ProjectSettings._projectSettings.QuitGame();
     }
     private void OnDestroy()
     {

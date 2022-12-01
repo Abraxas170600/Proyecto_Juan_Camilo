@@ -37,6 +37,6 @@ public class PlayerManager : MonoBehaviour
         indexPlayer = index;
         _playerSkin.UpdateMaterial(_playerDatabase._player[index]._playerData._otherAspects._material);
         _playerPhysic.UpdatePhysics(_playerDatabase._player[index]._playerData._otherAspects._physicMaterial, _rb, _playerDatabase._player[index]._playerData._otherAspects._playerMass);
-        _jetpackJump.Initialize(_playerDatabase._player[index]._playerData._advancedMovement._fuelAmount);
+        _jetpackJump.Initialize(_playerDatabase._player[index]._playerData._advancedMovement._fuelAmount/*, _playerDatabase._player[index]._playerData._advancedMovement._maxFuel*/);
     }
 }
