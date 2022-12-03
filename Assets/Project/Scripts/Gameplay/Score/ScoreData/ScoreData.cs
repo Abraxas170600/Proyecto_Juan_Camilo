@@ -6,5 +6,6 @@ public class ScoreData
 {
     public int _scoreAmount;
     public ScoreType _scoreType;
-    public enum ScoreType{ Normal, Heavy, Light }
+    public enum ScoreType{ Positive, Negative }
+    public Color _color;
 }
