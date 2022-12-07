@@ -24,12 +24,12 @@ public class GameUI : MonoBehaviour
     }
     private void Update()
     {
-        UpdateFuelBar();
+        //UpdateFuelBar();
         MenuPanel();
     }
-    public void UpdateFuelBar()
+    public void UpdateFuelBar(float fuel, Database database, int index)
     {
-        _fuelBar.fillAmount = _playerManager._jetpackJump.fuel / _playerManager._playerDatabase._player[_playerManager.indexPlayer]._playerData._advancedMovement._maxFuel;
+        _fuelBar.fillAmount = fuel / database._player[index]._playerData._advancedMovement._maxFuel;
     }
     public void UpdateScoreText()
     {
