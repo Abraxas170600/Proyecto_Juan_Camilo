@@ -16,16 +16,16 @@ public class DialogueUI : MonoBehaviour
         if (index <= _dialogueManager._dialogueDatabase._dialogue._dialogueData._sentences.Length + 1)
         {
             _dialogueText.text = _dialogueManager._dialogueDatabase._dialogue._dialogueData._sentences[index]._sentence;
-            TextFunction();
+            StartCoroutine(TextFunction());
         }
     }
-    public async void TextFunction()
+    public IEnumerator TextFunction()
     {
-        await Task.Delay(System.TimeSpan.FromSeconds(3));
+        yield return new WaitForSeconds(3f);
         _dialogueObject.SetActive(true);
-        await Task.Delay(System.TimeSpan.FromSeconds(8));
+        yield return new WaitForSeconds(8f);
         _dialogueAnimation.Play("DialogueText_Animation 0");
-        await Task.Delay(System.TimeSpan.FromSeconds(3));
+        yield return new WaitForSeconds(3f);
         _dialogueObject.SetActive(false);
     }
 }

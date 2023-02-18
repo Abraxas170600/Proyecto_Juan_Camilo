@@ -14,18 +14,18 @@ public class SoundController : MonoBehaviour
     }
     public void PlaySound()
     {
-        SoundEvent();
+        StartCoroutine(SoundEvent());
     }
-    public async void SoundEvent()
+    public IEnumerator SoundEvent()
     {
         SoundManager.Instance.StopMusic();
-        await Task.Delay(TimeSpan.FromSeconds(1));
+        yield return new WaitForSeconds(1f);
         SoundManager.Instance.PlaySound(_alarmClip);
-        await Task.Delay(TimeSpan.FromSeconds(1));
+        yield return new WaitForSeconds(1f);
         SoundManager.Instance.PlaySound(_clip[UnityEngine.Random.Range(0, 4)]);
-        await Task.Delay(TimeSpan.FromSeconds(7));
+        yield return new WaitForSeconds(7f);
         SoundManager.Instance.PlaySound(_alarmClip);
-        await Task.Delay(TimeSpan.FromSeconds(1));
+        yield return new WaitForSeconds(1f);
         SoundManager.Instance.PlayMusic();
     }
     private void OnDestroy()
