@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class PlayerManager : MonoBehaviour
 {
     public Database _playerDatabase;
+    public DataStorageObject _dataStorageObject;
     public PlayerInput _playerInput { get; private set; }
     public PlayerSkin _playerSkin { get; private set; }
     public PlayerPhysic _playerPhysic { get; private set; }
@@ -13,8 +15,10 @@ public class PlayerManager : MonoBehaviour
     public Rigidbody _rb { get; private set; }
     public Transform _camPosition;
     public int indexPlayer { get; private set; }
-    public int _currentScore;
+
     public UnityEvent<float, Database, int> OnUpdateFuel;
+    public UnityEvent<int> OnUpdateScoreText;
+
 
     private void Start()
     {
@@ -24,6 +28,8 @@ public class PlayerManager : MonoBehaviour
     {
         GetComponent();
         UpdatePlayer(indexPlayer);
+        GameEvents._gameEvents.AddScoreText += UpdateScore;
+        UpdateScore();
     }
     public void GetComponent()
     {
@@ -50,5 +56,13 @@ public class PlayerManager : MonoBehaviour
         _playerSkin.UpdateMaterial(_playerDatabase._player[index]._playerData._otherAspects._material);
         _playerPhysic.UpdatePhysics(_playerDatabase._player[index]._playerData._otherAspects._physicMaterial, _rb, _playerDatabase._player[index]._playerData._otherAspects._playerMass);
         _playerInput.Initialize(_playerDatabase._player[index]._playerData._advancedMovement._fuelAmount);
+    }
+    public void UpdateScore()
+    {
+        OnUpdateScoreText.Invoke(_dataStorageObject._dataStorage._currentScore);
+    }
+    private void OnDestroy()
+    {
+        GameEvents._gameEvents.AddScoreText -= UpdateScore;
     }
 }

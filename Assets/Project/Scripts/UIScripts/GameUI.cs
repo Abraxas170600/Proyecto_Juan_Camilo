@@ -7,7 +7,7 @@ using TMPro;
 
 public class GameUI : MonoBehaviour
 {
-    public PlayerManager _playerManager;
+    public DataStorageObject _dataStorageObject;
 
     public GameObject _MenuPanel;
     public GameObject _characterPanel;
@@ -18,10 +18,10 @@ public class GameUI : MonoBehaviour
     public static bool _menuPanelActive;
     public static bool _characterPanelActive;
 
-    private void Start()
-    {
-        GameEvents._gameEvents.AddScoreText += UpdateScoreText;
-    }
+    //private void Start()
+    //{
+    //    GameEvents._gameEvents.AddScoreText += UpdateScoreText();
+    //}
     private void Update()
     {
         //UpdateFuelBar();
@@ -31,9 +31,10 @@ public class GameUI : MonoBehaviour
     {
         _fuelBar.fillAmount = fuel / database._player[index]._playerData._advancedMovement._maxFuel;
     }
-    public void UpdateScoreText()
+    public void UpdateScoreText(int currentScore)
     {
-        _scoreText.text = $"{_playerManager._currentScore}";
+        currentScore = _dataStorageObject._dataStorage._currentScore;
+        _scoreText.text = $"{currentScore}";
     }
     public void MenuPanel()
     {
@@ -88,9 +89,9 @@ public class GameUI : MonoBehaviour
     {
         ProjectSettings._projectSettings.QuitGame();
     }
-    private void OnDestroy()
-    {
-        GameEvents._gameEvents.AddScoreText -= UpdateScoreText;
-    }
+    //private void OnDestroy()
+    //{
+    //    GameEvents._gameEvents.AddScoreText -= UpdateScoreText;
+    //}
 
 }

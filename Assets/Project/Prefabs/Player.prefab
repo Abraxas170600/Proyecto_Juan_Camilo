@@ -183,8 +183,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _playerDatabase: {fileID: 11400000, guid: c2755c667f0a71947b8d9ce0273d980f, type: 2}
+  _dataStorageObject: {fileID: 11400000, guid: 59f66e3ad57be9a459f01b90840740ca, type: 2}
   _camPosition: {fileID: 0}
-  _currentScore: 0
+  OnUpdateFuel:
+    m_PersistentCalls:
+      m_Calls: []
+  OnUpdateScoreText:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &1187567444143434847
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,7 +241,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _inputHandler: {fileID: -8968037672452550441}
-  fuel: 0
 --- !u!114 &-8968037672452550441
 MonoBehaviour:
   m_ObjectHideFlags: 0
