@@ -28,4 +28,5 @@ public class DialogueUI : MonoBehaviour
         yield return new WaitForSeconds(3f);
         _dialogueObject.SetActive(false);
     }
+    private void OnApplicationQuit() => StopAllCoroutines();
 }

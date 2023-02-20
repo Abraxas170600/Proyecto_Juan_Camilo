@@ -6,5 +6,8 @@ using UnityEngine;
 public class DataStorage
 {
     public int _currentScore;
-    public List<int> previousDialogues;
+    public int _indexPlayer;
+    //public List<Sentence> _currentDialogues;
+    public int _checker;
+    public Dictionary<string, int> _currentDialogues;
 }

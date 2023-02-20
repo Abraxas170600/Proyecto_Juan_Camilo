@@ -34,4 +34,16 @@ public class GameEvents : MonoBehaviour
         if (SoundAction != null)
             SoundAction();
     }
+    public event Action InitSoundAction;
+    public void InitSound()
+    {
+        if (InitSoundAction != null)
+            InitSoundAction();
+    }
+    public event Action checkCurrentDialogue;
+    public void Check()
+    {
+        if (checkCurrentDialogue != null)
+            checkCurrentDialogue();
+    }
 }

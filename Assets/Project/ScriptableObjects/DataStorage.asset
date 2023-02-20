@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: DataStorage
   m_EditorClassIdentifier: 
   _dataStorage:
-    _currentScore: 5
+    _currentScore: 0
+    _indexPlayer: 2
+    _checker: 0
