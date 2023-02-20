@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 2802845491028510820}
   - component: {fileID: 1140104275063682593}
   - component: {fileID: 8213056020980085850}
+  - component: {fileID: 1674431973463177104}
   m_Layer: 0
   m_Name: Score
   m_TagString: Score
@@ -131,6 +132,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _scoreDatabase: {fileID: 11400000, guid: c2755c667f0a71947b8d9ce0273d980f, type: 2}
+  _dataStorageObject: {fileID: 11400000, guid: 59f66e3ad57be9a459f01b90840740ca, type: 2}
 --- !u!114 &2802845491028510820
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,5 +168,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 536703f9d1cdf2b41aefd1c6b388f927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1674431973463177104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140104275063682619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58edc1a9019ef584984f01c8a45e92a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

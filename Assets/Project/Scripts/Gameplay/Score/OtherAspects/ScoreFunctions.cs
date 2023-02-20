@@ -4,33 +4,21 @@ using UnityEngine;
 
 public class ScoreFunctions : MonoBehaviour
 {
-    [SerializeField] private PlayerManager _playerManager;
-    [SerializeField] private DialogueUI _dialogueUI;
-    private int _checker;
-    private void Start()
+    public void AddScore(Database database, DataStorage dataStorage, int checker) 
     {
-        GameEvents._gameEvents.AddPoint += AddScore;
-        CheckScore();
-    }
-    public void AddScore() 
-    {
-        _playerManager._dataStorageObject._dataStorage._currentScore += _playerManager._playerDatabase._score[_playerManager._playerDatabase._player[_playerManager.indexPlayer]._playerData._id]._scoreData._scoreAmount;
-        CheckScore();
+        dataStorage._currentScore += database._score[database._player[dataStorage._indexPlayer]._playerData._id]._scoreData._scoreAmount;
+        CheckScore(database, dataStorage, checker);
     } 
-    public void CheckScore()
+    public void CheckScore(Database database, DataStorage dataStorage, int checker)
     {
-        for (int i = 0; i < _playerManager._playerDatabase._dialogue._dialogueData._sentences.Length; i++)
+        for (int i = 0; i < database._dialogue._dialogueData._sentences.Length; i++)
         {
-            if(_playerManager._dataStorageObject._dataStorage._currentScore >= _playerManager._playerDatabase._dialogue._dialogueData._sentences[i]._requierementScore && _checker == i)
+            if(dataStorage._currentScore >= database._dialogue._dialogueData._sentences[i]._requierementScore && checker == i)
             {
                 GameEvents._gameEvents.DialogueSound();
-                _dialogueUI.ShowText(i);
-                _checker++;
+                GameEvents._gameEvents.Check();
+                checker++;
             }
         }
-    }
-    private void OnDestroy()
-    {
-        GameEvents._gameEvents.AddPoint -= AddScore;
     }
 }
