@@ -17,20 +17,8 @@ public class GameUI : MonoBehaviour
 
     public static bool _menuPanelActive;
     public static bool _characterPanelActive;
-
-    //private void Start()
-    //{
-    //    GameEvents._gameEvents.AddScoreText += UpdateScoreText();
-    //}
-    private void Update()
-    {
-        //UpdateFuelBar();
-        MenuPanel();
-    }
-    public void UpdateFuelBar(float fuel, Database database, int index)
-    {
-        _fuelBar.fillAmount = fuel / database._player[index]._playerData._advancedMovement._maxFuel;
-    }
+    private void Update() => MenuPanel();
+    public void UpdateFuelBar(float fuel, Database database, int index) => _fuelBar.fillAmount = fuel / database._player[index]._playerData._advancedMovement._maxFuel;
     public void UpdateScoreText(int currentScore)
     {
         currentScore = _dataStorageObject._dataStorage._currentScore;
@@ -75,23 +63,12 @@ public class GameUI : MonoBehaviour
     public void OptionsPanel(int panelActive)
     {
         if (panelActive == 0)
-        {
             _optionsPanel.SetActive(true);
-            //Time.timeScale = 0;
-        }
         else if (panelActive == 1)
-        {
             _optionsPanel.SetActive(false);
-            //Time.timeScale = 1;
-        }
     }
     public void QuitButton()
     {
         ProjectSettings._projectSettings.QuitGame();
     }
-    //private void OnDestroy()
-    //{
-    //    GameEvents._gameEvents.AddScoreText -= UpdateScoreText;
-    //}
-
 }
